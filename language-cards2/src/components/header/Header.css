@@ -1,0 +1,10 @@
+.logo-container {
+  width: 37%;
+
+  text-align: center;
+  margin: 10px 0;
+}
+.reactLogo {
+  height: 25vh;
+  width: 100%;
+}
