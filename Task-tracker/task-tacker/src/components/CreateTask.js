@@ -1,14 +1,21 @@
 import {useState} from "react";
 
-function CreateTask() {
+function CreateTask({onCreate}) {
     const[text,setText]=useState("")
     const[day,setDay]=useState("")
     const handleTextChange =(e) =>setText(e.target.value)
     const handleDayChange =(e) =>setDay(e.target.value)
     const onSubmit=(e)=>{
         e.preventDefault();
-        setText("");
-        setDay("");
+        if(!day || !text){
+            alert("please fill both fields")
+        }else{
+
+            onCreate({text,day,isDone:false});
+            setText("");
+            setDay("");
+        }
+       
     }
     
 
