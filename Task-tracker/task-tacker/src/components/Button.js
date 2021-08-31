@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import "./Button.css"
 
- function Button({text,color,toggleShow}) {
+ function Button({text,color,toggleShow, taskBarShowed}) {
   return (
-    <div>
-        <button onClick={toggleShow} className="btn" style={{backgroundColor:color}}>
+    <div >
+        <button onClick={toggleShow} className={`btn  ${taskBarShowed ?  "hide" : ""}`} style={{backgroundColor:color}}>
             {text}
         </button>
       

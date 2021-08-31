@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./CreateTask.css";
 
 function CreateTask({onCreate}) {
     const[text,setText]=useState("")
@@ -22,7 +23,7 @@ function CreateTask({onCreate}) {
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
-        <label htmlfor="task">Task</label>
+        <label htmlFor="task">Task</label>
         <input
           id="task"
           name="task"

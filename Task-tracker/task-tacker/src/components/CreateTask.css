@@ -1,0 +1,25 @@
+.add-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+    margin: 10px;
+    background-color:rgb(247, 75, 104) ;
+    border: 1px solid rgb(247, 75, 104);
+   
+
+}
+#day,#task{
+
+    margin-top: 7px;
+    padding: 4px;
+    width: 100%;
+    
+}

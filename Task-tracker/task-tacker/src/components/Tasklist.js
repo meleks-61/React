@@ -7,7 +7,7 @@ import Task from './Task';
      
 
   return (
-    <div>
+    <div className="taskList">
         {elmn.map((item) => (
             <Task key={item.id} task={item} onDelete={onDelete} toggleDone={toggleDone}/>
             
