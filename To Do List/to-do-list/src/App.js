@@ -1,9 +1,11 @@
 
 import './App.css';
+import Card from"./componenets/Card"
 
 function App() {
   return (
-    <div className="Container">
+    <div className="App">
+      <Card />
      
       
     </div>
