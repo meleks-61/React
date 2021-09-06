@@ -8,8 +8,9 @@ function App() {
 
   useEffect(() => {
     fetch("https://breakingbadapi.com/api/characters")
-      .then((response) => response.json())
+      .then((response) =>  response.json())
       .then((data) => setItemList(data));
+      
 
     // axios
     //   .get("https://breakingbadapi.com/api/characters")
