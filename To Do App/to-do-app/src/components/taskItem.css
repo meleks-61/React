@@ -18,11 +18,17 @@
     border-radius: 10px;
     /* position: relative; */
     font-size: small;
-    width: 270px;
+    width: 260px;
     margin-bottom: 7px;
      padding-left: 7px; 
     padding-right: 7px;
 } 
 .overline{
     text-decoration: line-through;
+}
+.times{
+    visibility:hidden;
+}
+.taskitem:hover .times{
+    visibility: visible;
 }
