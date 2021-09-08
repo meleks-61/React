@@ -1,28 +1,43 @@
 import React from "react";
 import {BiCheckbox} from "react-icons/bi";
 import {FiCheck} from "react-icons/fi";
+import {TiTimes} from "react-icons/ti";
 import "./taskItem.css"
 
 
 
-const TaskItem=({item,toggleDone}) =>{
+
+
+
+
+const TaskItem=({item,toggleDone,onDelete,color}) =>{
+
+
+
+   
 
     return(
-        <div className={`taskitem ${item.isDone? "done": ""}`}  >
-            <h5>
-                {!item.isDone?
+        <div className="task">
+        <div className="taskitem"  style={{background:color}}  >
+                 {!item.isDone?
                 
-              <BiCheckbox className="kutu" onClick={()=>toggleDone(item.id)} />
-              :
-              <FiCheck className="tic"onClick={()=>toggleDone(item.id)}/>
-            }
+                <BiCheckbox className="kutu" onClick={()=>toggleDone(item.id)}  style={{ color:"lightgrey",cursor:"pointer"}}/>
+                :
+                <FiCheck className="tic"onClick={()=>toggleDone(item.id)} style={{ color:"purple",cursor:"pointer"}} />
+              }
+
+            <p className={`${item.isDone ? "overline": ""}`} style={ { color:"purple"} }>
+           
               {item.text} 
+              
 
 
-            </h5>
+            </p>
+            <TiTimes className="times" onClick={()=>onDelete(item.id)} style={ !item.isDone ?{ color:"lightgrey",cursor:"pointer"} : {color:"purple",cursor:"pointer"}}/>
 
 
 
+        </div>
         </div>
 
 

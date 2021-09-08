@@ -1,0 +1,28 @@
+ /* .kutu,
+.tic,
+.times{
+    display: inline;
+} */
+ p{
+     
+    /* display: inline; */
+    width: 250px;
+    word-wrap: break-word;
+ 
+    
+} 
+ .taskitem{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+    border-radius: 10px;
+    /* position: relative; */
+    font-size: small;
+    width: 270px;
+    margin-bottom: 7px;
+     padding-left: 7px; 
+    padding-right: 7px;
+} 
+.overline{
+    text-decoration: line-through;
+}

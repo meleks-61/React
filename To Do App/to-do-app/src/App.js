@@ -44,6 +44,8 @@ const[showDate,setShowDate]= useState("");
 const[showTime,setShowTime]=useState("")
 const[showTask, setTask] =useState(initialState)
 
+//Create Task
+
 
 
 const onCreate =(task) =>{
@@ -52,6 +54,8 @@ const onCreate =(task) =>{
   setTask((prevState) =>[...prevState,NewTask])
 }//bu code ile her yazdığımız taski bir önceki yazılanla beraber(id ile) obje içerikli bir arraye depoluyoruz.
 
+//ToggleDone(task is done or not)
+
 const toggleDone =(id)=>{
   setTask(showTask.map((item)=>
   item.id===id ? {...item, isDone:!item.isDone}:item
@@ -59,7 +63,13 @@ const toggleDone =(id)=>{
     )
 }
 
+//Delete a task
+
+const onDelete =(deletedId)=>setTask((showTask.filter((item)=>item.id!==deletedId)))
+
+
 useEffect(()=>{
+  
   function show(){
   const time = new Date();
   const newTime=time.toLocaleTimeString()
@@ -87,7 +97,7 @@ useEffect(()=>{
       <Header title="Happy" showDate={showDate} showTime={showTime} />
       <CreateTask onCreate ={onCreate}/>
       {showTask.length>0 ?
-      <TaskList showTask={showTask} toggleDone={toggleDone}/>
+      <TaskList showTask={showTask} toggleDone={toggleDone} onDelete={onDelete}/>
       :null
       }
       
