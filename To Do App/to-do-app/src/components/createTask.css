@@ -4,6 +4,7 @@
     align-items: center;
     border-radius: 7px;
     margin-bottom: 7px;
+    background-color: blanchedalmond;
 
 }
 #task{
@@ -11,11 +12,13 @@
     border: none;
     width: 70%;
     margin-bottom: 3px;
+    background-color: blanchedalmond;
 }
 .pen{
     position: relative;
     right: 15px;
     vertical-align: middle;
+    
     
     
 }
@@ -30,3 +33,7 @@
     vertical-align: middle;
     
 }
+
+    
+
+
