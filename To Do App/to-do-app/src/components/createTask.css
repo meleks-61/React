@@ -1,0 +1,31 @@
+.add-input{
+    border: 1px solid black;
+    width: 280px;
+    align-items: center;
+    border-radius: 7px;
+
+}
+#task{
+    outline: none;
+    border: none;
+    width: 70%;
+    margin-bottom: 3px;
+}
+.pen{
+    position: relative;
+    right: 15px;
+    vertical-align: middle;
+    
+    
+}
+.add-task{
+    /* width: 100vw;
+    height: 100vh; */
+    /* border: 1px solid blue; */
+}
+.plus{
+    position: relative;
+    left: 15px;
+    vertical-align: middle;
+    
+}
