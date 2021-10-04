@@ -12,12 +12,13 @@ const mealTypes=["Breakfast", "Lucnh", "Dinner", "Snack", "Teatime"];
      const APP_KEY =""
 
  function Home() {
-     const[query,setQuery]=useState("apple");
+    //  const[query,setQuery]=useState("apple");
+     const[query,setQuery]=useState();
      const[recipes,setRecipes] = useState();
      const[meal,setMeal]= useState(mealTypes[0].toLowerCase());
      const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`;
 
-     const getdata = async()=>{
+     const getData = async()=>{
          if (query !== "") {
              const result = await axios.get(url);
             //  console.log("result: ",result)
@@ -56,8 +57,12 @@ const mealTypes=["Breakfast", "Lucnh", "Dinner", "Snack", "Teatime"];
                 
             </MainContainer>
         )
-        :null
-    }
+        : (
+            <ImgDiv>
+              <HomeImg src={homeSvg} />
+            </ImgDiv>
+          )}
+    
 
       
     </div>
